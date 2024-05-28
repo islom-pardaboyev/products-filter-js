@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Products</title>
+    <!-- google fonts (montserrat) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        img {
+            height: 400px !important;
+            margin: 0 auto;
+        }
+        .productsElement{
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            transition: all .3s ease;
+        }
+
+        .productsElement:hover{
+            box-shadow: none;
+        }
+    </style>
+</head>
+
+<body class="font-montserrat">
+    <div class="text-center flex items-center mt-7 justify-center gap-2">
+        <label for="searchProducts" class="bg-blue px-4 py-2 rounded-md">Search</label>
+        <input type="text" class="border-2 border-blue py-1 rounded-md px-2 outline-none" id="searchProducts">
+    </div>
+    
+    <main id="products-container" class="products-container px-10 my-10 grid grid-cols-12 gap-6">
+        <!-- Products will be dynamically inserted here -->
+    </main>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        montserrat: ["Montserrat", "sans-serif"]
+                    },
+                    boxShadow: {
+                        "card-shadow": "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;"
+                    },
+                    colors: {
+                        blue: {
+                            DEFAULT: '#00FFCA'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="/main.js"></script>
+</body>
+
+</html>
