@@ -7,7 +7,6 @@ searchProducts.addEventListener('input', (e) => {
   const value = e.target.value.toLowerCase();
   const filteredProducts = products.filter(product => product.title.toLowerCase().includes(value));
   displayProducts(filteredProducts);
-  console.log(value);
 });
 
 const displayProducts = (products) => {
@@ -37,4 +36,4 @@ fetch('https://dummyjson.com/products')
     products = data.products;
     displayProducts(products);
   })
-  .catch(error => console.error('Error:', error));
+  .catch(error => console.error('Error: ', error));
